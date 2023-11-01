@@ -1,0 +1,57 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Expense Tracker</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="container">
+            <div class="sub-container">
+                <div class="total-amt-container">
+                    <h3>Budget</h3>
+                    <p class="hide error" id="budget-error">
+                        Value cannot be empty
+                    </p>
+                    <input type="number" id="total-amt" placeholder="Enter Total Budget" />
+                    <button type="submit" id="total-amt-button">Set Budget</button>
+                </div>
+                <div class="user-amt-container">
+                    <h3>Expenses</h3>
+                    <p class="hide error" id="expense-title-error">
+                        Empty Fields/Insufficient Balance
+                    </p>
+                    <input type="text" class="expense-title" id="expense-title" placeholder="Enter Name Of Expense" />
+                    <input type="number" id="expense-amt" placeholder="Enter Expense Amount`" />
+                    <button type="submit" id="check-amt">Check Amount</button>
+                </div>
+            </div>
+            
+            <div class="output-container flex-space">
+                <div>
+                    <p>Total Budget</p>
+                    <span id="amount">0</span>
+                </div>
+                <div>
+                    <p>Expenses</p>
+                    <span id="expend-value">0</span>
+                </div>
+                <div>
+                    <p>Balance</p>
+                    <span id="balance-amt">0</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="list">
+            <h3>Expenses List</h3>
+            <div class="list-container" id="list"></div>
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
